@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <a href="../index.php"> <button class="btn btn-light form-control ms-1" type="button">volver</button></a>
+
+    <form action="./login.php" method='POST'>
+
+
+
+        <section class="form-login">
+            <h5>INICIAR SESION</h5>
+            <input class="controls" type="text" name="correo" value="" placeholder="Ingrese su correo" required>
+            <input class="controls" type="password" name="pwd" value="" placeholder="Ingrese su contraseña" required>
+            <input class="buttons" type="submit" name="Inicio" value="Iniciar Sesion">
+    </form>
+    <form action="./registro.php" method="'POST">
+        <h6>¿No tienes cuenta? Registrate gratis</h6>
+        <input class="buttons" type="submit" name="registrarse" value="Registrate">
+    </form>
+    </section>
+
+
+</body>
+
+</html>

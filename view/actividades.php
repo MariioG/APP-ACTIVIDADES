@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades</title>
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e0b63cee0f.js" crossorigin="anonymous"></script>
     <!-- Hoja de estilos -->
@@ -22,27 +19,57 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">#AppName</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="../index.php">#AppName</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
                     <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.html">Sobre nosotros</a>
+                        <a class="nav-link" href="./nosotros.php">Sobre nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active disabled" aria-current="page"
-                            href="./actividades.html">Actividades</a>
+                        <a class="nav-link active disabled" aria-current="page" href="./actividades.html">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/mis.actividades.php">Mis actividades</a>
                     </li>
                 </ul>
                 <form class="d-flex">
                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <button class="btn btn-light form-control me-1" type="submit"><i
-                            class="fa-solid fa-arrow-up-from-bracket"></i></button>
-                    <button class="btn btn-light form-control ms-1" type="submit">Acceder</button>
+    
+                            <?php
+                    session_start();
+                    if (!isset($_SESSION['correo_usuario'])) {
+                        ?>
+                         <a href="../paginas/colgar_actividad.html"> <button class="btn btn-light form-control me-1" type="button"><i
+                            class="fa-solid fa-arrow-up-from-bracket"></i></button></a>
+                            <?php
+                    }else {
+                        ?>
+                        <a href="../paginas/login.html"> <button class="btn btn-light form-control me-1" type="button"><i
+                        class="fa-solid fa-arrow-up-from-bracket"></i></button></a>
+                        <?php
+                    }
+                    ?>
+                    <?php
+
+
+                    if (isset($_SESSION['correo_usuario'])) {
+                        ?>
+                        <a href="../paginas/login.html"> <button class="btn btn-light form-control ms-1" type="button">acceder</button></a>
+                         <?php
+                    
+                    }else {
+                        
+                         ?>
+                         <a href="../paginas/logout.php"> <button class="btn btn-light form-control ms-1" type="button">Logout</button></a>
+                               <?php
+                        
+                  
+                    }
+                    ?>
                 </form>
             </div>
         </div>
@@ -53,19 +80,19 @@
 
         <div class="column-1 padding-s">
             <div class="column-5 padding-s">
-                <img src="../img/keila-hotzel-lFmuWU0tv4M-unsplash.jpg" alt="" class="target-s">
+                <img src="../img/temporada-5-de-haikyuu-fecha-de-lanzamiento.jpg" alt="" class="target-s">
             </div>
             <div class="column-5 padding-s">
-                <img src="../img/susanna-marsiglia-Yjr6EafseQ8-unsplash.jpg" alt="" class="target-s">
+                <img src="../img/bokunohero.jpg" alt="" class="target-s">
             </div>
             <div class="column-5 padding-s">
-                <img src="../img/dan-cristian-padure-QQkQcaz7qmY-unsplash.jpg" alt="" class="target-s">
+                <img src="../img/todoroki.jpg" alt="" class="target-s">
             </div>
             <div class="column-5 padding-s">
-                <img src="../img/nick-fewings-EkyuhD7uwSM-unsplash.jpg" alt="" class="target-s">
+                <img src="../img/anime.jpg" alt="" class="target-s">
             </div>
             <div class="column-5 padding-s">
-                <img src="../img/etienne-girardet-j2Soo4TfFMk-unsplash.jpg" alt="" class="target-s">
+                <img src="../img/naruto.jpg" alt="" class="target-s">
             </div>
 
         </div>
@@ -79,49 +106,49 @@
         </div>
 
         <div class="column-3 padding-mobile">
-            <img src="../img/eva-gour-94mm2Txn12s-unsplash.jpg" alt="" class="target">
+            <img src="../img/anime.jpg" alt="" class="target">
+            <div style="float: right;" class="padding-m">
+                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
+                <button class="btn btn-light m-1" type="button" href="../paginas/mis.actividades.php"><i class="fa-solid fa-heart" ></i></button>
+            </div>
+        </div>
+        <div class="column-3 padding-mobile">
+            <img src="../img/naruto.jpg" alt="" class="target">
             <div style="float: right;" class="padding-m">
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
             </div>
         </div>
         <div class="column-3 padding-mobile">
-            <img src="../img/dan-cristian-padure-QQkQcaz7qmY-unsplash.jpg" alt="" class="target">
+            <img src="../img/bokunohero.jpg" alt="" class="target">
             <div style="float: right;" class="padding-m">
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
             </div>
         </div>
         <div class="column-3 padding-mobile">
-            <img src="../img/etienne-girardet-j2Soo4TfFMk-unsplash.jpg" alt="" class="target">
+            <img src="../img/temporada-5-de-haikyuu-fecha-de-lanzamiento.jpg" alt="" class="target">
             <div style="float: right;" class="padding-m">
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
             </div>
         </div>
         <div class="column-3 padding-mobile">
-            <img src="../img/lucas-hoang-mwfBszKf5Xw-unsplash.jpg" alt="" class="target">
+            <img src="../img/lol.jpg" alt="" class="target">
             <div style="float: right;" class="padding-m">
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
             </div>
         </div>
         <div class="column-3 padding-mobile">
-            <img src="../img/mathilde-langevin-tbzSgZbEuz4-unsplash.jpg" alt="" class="target">
+            <img src="../img/todoroki.jpg" alt="" class="target">
             <div style="float: right;" class="padding-m">
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
             </div>
         </div>
         <div class="column-3 padding-mobile">
-            <img src="../img/nick-fewings-EkyuhD7uwSM-unsplash.jpg" alt="" class="target">
-            <div style="float: right;" class="padding-m">
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
-                <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
-            </div>
-        </div>
-        <div class="column-3 padding-mobile">
-            <img src="../img/susanna-marsiglia-Yjr6EafseQ8-unsplash.jpg" alt="" class="target">
+            <img src="../img/fotos-perfil-whatsapp_16.jpg" alt="" class="target">
             <div style="float: right;" class="padding-m">
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-link"></i></button>
                 <button class="btn btn-light m-1" type="submit"><i class="fa-solid fa-heart"></i></button>
