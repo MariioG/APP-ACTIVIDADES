@@ -26,11 +26,11 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 50vh;">
                     <li class="nav-item">
-                        <a class="nav-link" href="../view/nosotros.html">Sobre nosotros</a>
+                        <a class="nav-link" href="../view/nosotros.php">Sobre nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active disabled" aria-current="page" href="../view/actividades.html">Actividades</a>
+                        <a class="nav-link active disabled" aria-current="page" href="../view/actividades.php">Actividades</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./mis.actividades.php">Mis actividades</a>
@@ -40,16 +40,7 @@
                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
                     <a href="./colgar_actividad.php"><button class="btn btn-light form-control me-1" type="button"><i
                             class="fa-solid fa-arrow-up-from-bracket"></i></button></a>
-                            <?php
-                            session_start();
-                            //$_SESSION["email_usu"]=$correo;
-
-                            if(isset($_SESSION["correo_usuario"])){
-                                echo "<a href='./logout.php'><button class='btn btn-light form-control ms-1' type='button'>Logout</button></a>";
-                            }else{
-                                echo "<a href='./login.html'><button class='btn btn-light form-control ms-1' type='button'>Acceder</button></a>";
-                            }
-                            ?>
+                          
                    
                 </form>
             </div>

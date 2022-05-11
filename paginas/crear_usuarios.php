@@ -29,7 +29,7 @@ if (empty($nombre) or empty($correo) or empty($contra)) {
         if (!$correo_encontrado){
             $sql = "INSERT INTO `tbl_usuario` (`nombre_usuario`,`correo_usuario`, `contra_usuario`) VALUES ('$nombre','$correo','$contra')";
             $insert = mysqli_query($connection, $sql);
-            header('Location: ../index.php');
+            header('Location: ../view/actividades.php');
             $num = mysqli_num_rows($result);
         if($num==1){
             session_start();
