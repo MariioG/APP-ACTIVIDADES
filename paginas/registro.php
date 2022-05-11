@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<!--Formulario para registrate en la pagina y te lleve a donde diga-->
     <a href="./login.html"> <button class="btn btn-light form-control ms-1" type="button">Iniciar sesion</button></a>
     <form action="./crear_usuarios.php" method='POST'>
         <section class="form-login">

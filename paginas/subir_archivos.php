@@ -9,7 +9,7 @@
 <body>
     
 <?php
- 
+ //recogemos los datos del formulario de colgar las actividades y lo enviamos a la base de datos con sus respectivos nombres
    session_start();
    $titulo = $_POST['titulo'];
    $desc = $_POST['descripcion'];

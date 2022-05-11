@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+<!--Pagina principal, donde a raiz de ella podemos llegar a todos los sitios-->
 
     <main>
         <h1>Disfruta de compartir 🚀</h1>

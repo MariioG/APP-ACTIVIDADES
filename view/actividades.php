@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<!--menu de activades, donde se encuentran todas-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.php">#AppName</a>
@@ -41,7 +42,7 @@
     
                             <?php
                     session_start();
-                    if (!isset($_SESSION['correo_usuario'])) {
+                    if (isset($_SESSION['correo_usuario'])) {
                         ?>
                          <a href="../paginas/colgar_actividad.html"> <button class="btn btn-light form-control me-1" type="button"><i
                             class="fa-solid fa-arrow-up-from-bracket"></i></button></a>

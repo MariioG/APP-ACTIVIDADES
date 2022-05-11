@@ -1,4 +1,5 @@
 <?php
+//Llamamos a la base de dstos para ver si el usuario ya existe o no y depende hacemos una cosa o otra
 if (isset($_POST['Inicio'])) {
     if (isset($_POST['correo']) && isset($_POST['pwd']) ) {
         $email = $_POST['correo'];

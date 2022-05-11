@@ -1,4 +1,6 @@
 <?php
+//Recogemos los datos del formulario y los insertamos directamente en la base de datos para que despues salga un mensaje depende d
+//del usuario que hayamos puesto
 include 'conexion.php';
 
 $nombre = $_POST['nombre_usuario'];
